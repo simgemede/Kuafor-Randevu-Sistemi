@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuaför Randevu Sistemi</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <style>
+    .custom-margin {
+        margin-bottom: 8px; 
+        text-align: left;
+    }
+
+    .custom-btn {
+      width: 300px;
+      margin-top
+      : 0px;
+    }
+    .custom-margin-1 {
+        margin-bottom: 25px; 
+        text-align: left;
+    }
+
+    .custom-text {
+            font-size: 12px;
+            margin-bottom: 0px;
+            margin-top: 15px;
+        }
+
+    .input-group {
+           max-width: 500px; /* İstenilen maksimum genişlik */
+           margin-bottom: 8px; /* Sayfa ortalamak için */
+       }
+
+    .navbar-dets {
+        margin-right: 30px;
+       }
+
+    .navbar-brands {
+        margin-left: 40px;
+       }
+
+    .navs {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+       }
+
+    .nav.item {
+        list-style: none;
+       }
+    body {
+        background-color: rgb(213, 229, 219);
+        align-items: center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+    <nav class="navbar bg-dark">
+       <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="c:\Users\hp\Downloads\kuaforikon.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top navbar-brands">
+          </a>
+
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active btn btn-success navs" aria-current="page" href="#">Hakkımızda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active btn btn-success navs" href="#">Hizmetlerimiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active btn btn-success navs" href="#">Bize Ulaşın</a>
+            </li>
+          </ul>
+         
+
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success navbar-dets" type="submit">ARA</button>
+          </form>
+    </nav>
+  </nav>
+    
+
+<div class="container mt-5">
+  <div class="d-flex justify-content-center">
+    <p class="d-inline-flex gap-1">
+    <button class="btn btn-success btn-md custom-btn" data-bs-toggle="collapse" data-bs-target="#placeholder1" aria-expanded="true" aria-controls="placeholder1">Kullanıcı Girişi</button>
+    <button class="btn btn-success btn-md custom-btn" data-bs-toggle="collapse" data-bs-target="#placeholder2" aria-expanded="false" aria-controls="placeholder2">Yönetici Girişi</button>
+    <button class="btn btn-success btn-md custom-btn" data-bs-toggle="collapse" data-bs-target="#placeholder3" aria-expanded="false" aria-controls="placeholder3">Kuaför Girişi</button>
+    </p>  
+  </div>
+
+  <label for="input1"></label>
+
+  <div class="collapse show" id="placeholder1">
+
+    <center>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Mail Adresiniz:</span>
+      <input type="text" class="form-control" placeholder="" aria-label="Username">
+      <span class="input-group-text">@</span>
+      <input type="text" class="form-control" placeholder="" aria-label="Server">
+    </div>
+
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text custom-margin-1" id="addon-wrapping">Şifreniz:</span>
+      <input type="text" class="form-control custom-margin-1" placeholder="" aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
+         <div class="col-md-5 mb-2">
+        <button type="button" class="btn btn-primary btn-block custom-btn">Giriş Yap</button>
+        <h4 class="custom-text">Hesabınız mı yok?</h4>
+       
+        <h1></h1>
+        <button type="button" class="btn btn-primary btn-block custom-btn" onclick="redirectToPage()">Yeni Hesap Oluştur</button>
+
+ 
+        <script>
+            function redirectToPage() {
+          window.location.href = "index1.html";
+        }
+        </script>
+
+      </div>
+    </center>
+  </div>
+ 
+  <div class="collapse" id="placeholder2">
+
+   <center>
+
+    <div class="input-group">
+      <span class="input-group-text custom-margin">Adınız / Soyadınız:</span>
+      <input type="text" aria-label="First name" class="form-control input-group" aria-describedby="basic-addon1">
+      <input type="text" aria-label="Last name" class="form-control input-group " aria-describedby="basic-addon1">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">Mail Adresiniz:</span>
+      <input type="text" class="form-control" placeholder="" aria-label="Username">
+      <span class="input-group-text">@</span>
+      <input type="text" class="form-control" placeholder="" aria-label="Server">
+    </div>
+
+    <div class="input-group flex-nowrap">
+      <span class="input-group-text custom-margin-1" id="addon-wrapping">Şifreniz:</span>
+      <input type="text" class="form-control custom-margin-1" placeholder="" aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
+
+    <div class="col-md-5 mb-2">
+      <button type="button" class="btn btn-primary btn-block custom-btn">Giriş Yap</button>
+    </div> 
+
+   </center>
+  </div>
+
+  <div class="collapse" id="placeholder3">
+   
+    <center>
+
+      <div class="input-group">
+        <span class="input-group-text custom-margin">Adınız / Soyadınız:</span>
+        <input type="text" aria-label="First name" class="form-control input-group ">
+        <input type="text" aria-label="Last name" class="form-control input-group ">
+      </div>
+  
+      <div class="input-group mb-3">
+        <span class="input-group-text">Mail Adresiniz:</span>
+        <input type="text" class="form-control" placeholder="" aria-label="Username">
+        <span class="input-group-text">@</span>
+        <input type="text" class="form-control" placeholder="" aria-label="Server">
+      </div>
+  
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text custom-margin-1" id="addon-wrapping">Şifreniz:</span>
+        <input type="text" class="form-control custom-margin-1" placeholder="" aria-label="Username" aria-describedby="addon-wrapping">
+      </div>
+  
+      <div class="col-md-5 mb-2">
+        <button type="button" class="btn btn-primary btn-block custom-btn">Giriş Yap</button>
+        </div> 
+  
+     </center>
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('[data-bs-toggle="collapse"]');
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        // Tüm collapse alanlarını gizle
+        document.querySelectorAll('.collapse').forEach(function (collapse) {
+          collapse.classList.remove('show');
+        });
+
+        // Tıklanan butona ait collapse alanını göster
+        const targetId = this.getAttribute('data-bs-target').substring(1);
+        const targetCollapse = document.getElementById(targetId);
+        targetCollapse.classList.add('show');
+      });
+    });
+  });
+</script>
+</body>
+</html>

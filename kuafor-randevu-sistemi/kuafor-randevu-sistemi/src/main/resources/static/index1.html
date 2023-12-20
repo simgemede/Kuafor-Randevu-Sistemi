@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Kullanıcı Kayıt Sayfası</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <style>
+        .custom-margin {
+        margin-bottom: 8px; 
+        text-align: left;
+    }
+    .custom-btn {
+      width: 300px;
+      margin-top: 8px;
+    }
+    .custom-margin-1 {
+        margin-bottom: 25px; 
+        text-align: left;
+    }
+    .custom-margin-2{
+      margin-bottom: 8px; 
+        text-align: left;
+        margin-top: 25px;
+    }
+    .custom-text {
+            font-size: 20px;
+            margin-bottom: 0px;
+            margin-top: 35px;
+        }
+        .input-group {
+           max-width: 500px; /* İstenilen maksimum genişlik */
+           margin-bottom: 8px; /* Sayfa ortalamak için */
+       }
+        .navbar-dets {
+        margin-right: 30px;
+       }
+       .navbar-brands {
+        margin-left: 40px;
+       }
+       .navs {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+       }
+       body {
+        background-color: rgb(213, 229, 219);
+    }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar bg-dark">
+        <div class="container-fluid">
+           <a class="navbar-brand" href="#">
+             <img src="c:\Users\hp\Downloads\kuaforikon.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top navbar-brands">
+           </a>
+ 
+           <ul class="nav">
+             <li class="nav-item">
+               <a class="nav-link active btn btn-success navs" aria-current="page" href="#">Hakkımızda</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active btn btn-success navs" href="#">Hizmetlerimiz</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active btn btn-success navs" href="#">Bize Ulaşın</a>
+             </li>
+           </ul>
+          
+ 
+           <form class="d-flex" role="search">
+             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-outline-success navbar-dets" type="submit">ARA</button>
+           </form>
+     </nav>
+   </nav>
+
+<center>
+    <h4 class="custom-text">Lütfen Bilgilerinizi Giriniz.</h4>
+
+  <div class="input-group">
+    <span class="input-group-text custom-margin-2">Adınız / Soyadınız:</span>
+    <input type="text" aria-label="First name" class="form-control input-group custom-margin-2">
+    <input type="text" aria-label="Last name" class="form-control input-group custom-margin-2">
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">Mail Adresiniz:</span>
+    <input type="text" class="form-control" placeholder="" aria-label="Username">
+    <span class="input-group-text">@</span>
+    <input type="text" class="form-control" placeholder="example.com" aria-label="Server">
+  </div>
+
+  <div class="input-group flex-nowrap">
+    <span class="input-group-text custom-margin" id="addon-wrapping">Tel. No:</span>
+    <input type="text" class="form-control custom-margin" placeholder="+90" aria-label="Username" aria-describedby="addon-wrapping">
+  </div>
+
+  <div class="input-group flex-nowrap">
+    <span class="input-group-text custom-margin-1" id="addon-wrapping">Şifreniz:</span>
+    <input type="text" class="form-control custom-margin-1" placeholder="" aria-label="Username" aria-describedby="addon-wrapping">
+  </div>
+
+  <div class="col-md-5 mb-2">
+    <button type="button" class="btn btn-primary btn-block custom-btn">Kayıt Ol</button>
+  </div> 
+
+
+  <h1></h1>
+<a href="index.html">Geri Dön</a>
+
+</center>
+</body>
+</html>
