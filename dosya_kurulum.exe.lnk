@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randevu Oluşturma Sayfası</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<style>
+       .dropdown {
+        max-width: 500px; /* İstenilen maksimum genişlik */
+        margin-bottom: 8px;
+        margin-top: 10;
+       } 
+       .custom-text {
+            font-size: 20px;
+            margin-bottom: 30px;
+            margin-top: 5px;
+       }
+       .navbar-dets {
+        margin-right: 30px;
+       }
+       .navbar-brands {
+        margin-left: 40px;
+       }
+       .navs {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+       }
+       .form-control{
+        max-width: 500px;
+        margin-bottom: 10px;
+        margin-top: 3px;
+       }
+
+       .custom-margin-1 {
+       margin-top: 3px;
+       margin-bottom: 1px;
+        text-align: left;
+       }
+       .custom-btn {
+      width: 150px;
+      margin-top: 12px;
+       }
+    .form-label{
+      color: rgb(4, 52, 10);
+      margin-bottom: 1px;
+      }
+    .input-group {
+           max-width: 500px; /* İstenilen maksimum genişlik */
+           margin-bottom: 8px; /* Sayfa ortalamak için */
+      }
+
+</style>
+</head>
+<body>
+
+    <nav class="navbar bg-dark">
+        <div class="container-fluid">
+           <a class="navbar-brand" href="#">
+             <img src="c:\Users\hp\Downloads\kuaforikon.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top navbar-brands">
+           </a>
+ 
+           <ul class="nav">
+             <li class="nav-item">
+               <a class="nav-link active btn btn-success navs" aria-current="page" href="#">Hakkımızda</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active btn btn-success navs" href="#">Hizmetlerimiz</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link active btn btn-success navs" href="#">Bize Ulaşın</a>
+             </li>
+           </ul>
+          
+ 
+           <form class="d-flex" role="search">
+             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-outline-success navbar-dets" type="submit">ARA</button>
+           </form>
+     </nav>
+   </nav>
+
+   <div class="container mt-3">
+    <center>
+    <h4 class="custom-text">Randevu Oluşturmak İçin Gerekli Alanları Doldurunuz.</h4>
+  
+    <label for="text" class="form-label">Kuaför Seçimi:</label>
+    <select class="form-select form-control" aria-label="Default select example">
+      <option selected>Lütfen Kuaför Seçimi Yapınız</option>
+      <option value="1">Kuaför 1</option>
+      <option value="2">Kuaför 2</option>
+      <option value="3">Kuaför 3</option>
+      <option value="3">Kuaför 4</option>
+    </select>
+   </div>
+
+  </center>
+
+  <center>
+      <div class="container mt-3">
+        <label for="text" class="form-label">İşlem Seçimi:</label>
+        <select class="form-select form-control" id="islemSecimi" aria-label="Default select example">
+          <option selected>Lütfen İşlem Seçimi Yapınız</option>
+          <option value="1">Saç Kesimi</option>
+          <option value="2">Fön</option>
+          <option value="3">Saç Boyatma</option>
+          <option value="4">Manikür</option>
+          <option value="5">Pedikür</option>
+          <option value="6">Cilt Bakımı</option>
+          <option value="7">Makyaj</option>
+          <option value="8">Diğer (Lütfen Belirtiniz)</option>
+        </select>
+       </div>
+  </center>
+   
+<center>
+  <div class="input-group flex-nowrap">
+    <span class="input-group-text custom-margin-1 form-label" id="addon-wrapping">Diğer:</span>
+    <input type="text" class="form-control custom-margin-1" placeholder="" aria-label="Username" aria-describedby="addon-wrapping">
+  </div>
+</center>
+
+ <center>
+  <div class="container mt-3">
+    <label for="text" class="form-label">Not:</label>
+      <input type="text" class="form-control" placeholder="Eklemek istediğiniz bir not var mı?" aria-label="Username">
+  </div>
+ </center>
+
+  <center>
+    <div class="container mt-3">
+      <label for="datepicker" class="form-label">Tarih Seçimi:</label>
+      <input type="text" id="datepicker" class="form-control" placeholder="Lütfen Tarih Seçiniz">
+    </div>
+  </center>
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+  
+  <!-- Bootstrap Datepicker JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  
+  <script>
+      $(document).ready(function(){
+          $('#datepicker').datepicker({
+              format: 'dd/mm/yyyy', // Tarih formatı
+              language: 'tr', // Türkçe dil desteği
+              autoclose: true, // Seçildikten sonra otomatik kapatma
+              todayHighlight: true // Bugünü vurgula
+          });
+      });
+  </script>
+
+<center>
+<div class="col-md-5 mb-2">
+  <button type="button" class="btn btn-primary btn-block custom-btn">Randevu Oluştur</button>
+</div>
+</center>
+</body>
+</html>
