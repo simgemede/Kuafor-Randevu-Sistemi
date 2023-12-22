@@ -17,6 +17,7 @@ import lombok.Setter;
 @Entity
 
 public class kullanici {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,4 +27,5 @@ public class kullanici {
     private String email;
     private String telno;
     private String sifre;
+
 }
