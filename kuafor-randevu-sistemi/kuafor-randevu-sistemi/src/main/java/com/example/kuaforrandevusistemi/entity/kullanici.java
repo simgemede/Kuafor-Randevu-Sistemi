@@ -26,5 +26,4 @@ public class kullanici {
     private String email;
     private String telno;
     private String sifre;
-
 }
