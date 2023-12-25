@@ -111,21 +111,28 @@
       <span class="input-group-text custom-margin-1" id="addon-wrapping">Şifreniz:</span>
       <input type="text" class="form-control custom-margin-1" placeholder="" aria-label="Username" aria-describedby="addon-wrapping">
     </div>
-         <div class="col-md-5 mb-2">
-        <button type="button" class="btn btn-primary btn-block custom-btn">Giriş Yap</button>
-        <h4 class="custom-text">Hesabınız mı yok?</h4>
-       
-        <h1></h1>
-        <button type="button" class="btn btn-primary btn-block custom-btn" onclick="redirectToPage()">Yeni Hesap Oluştur</button>
+         
 
- 
+      <h1></h1>
+          <button type="button" class="btn btn-primary btn-block custom-btn" 
+          onclick="redirectToIndex2()">Giriş Yap</button>
+          <script>
+              function redirectToIndex2() {
+            window.location.href = "index2.html";
+          }
+          </script>
+
+        <h4 class="custom-text">Hesabınız mı yok?</h4>
+
+      <h1></h1>
+        <button type="button" class="btn btn-primary btn-block custom-btn" 
+        onclick="redirectToIndex1()">Yeni Hesap Oluştur</button>
         <script>
-            function redirectToPage() {
+            function redirectToIndex1() {
           window.location.href = "index1.html";
         }
         </script>
-
-      </div>
+     
     </center>
   </div>
  
@@ -151,10 +158,13 @@
       <input type="text" class="form-control custom-margin-1" placeholder="" aria-label="Username" aria-describedby="addon-wrapping">
     </div>
 
-    <div class="col-md-5 mb-2">
-      <button type="button" class="btn btn-primary btn-block custom-btn">Giriş Yap</button>
-    </div> 
-
+    <h1></h1>
+    <button type="button" class="btn btn-primary btn-block custom-btn" onclick="redirectToPage()">Giriş Yap</button>
+    <script>
+        function redirectToPage() {
+      window.location.href = "index3.html";
+    }
+    </script>
    </center>
   </div>
 
