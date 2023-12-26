@@ -15,7 +15,7 @@ public class kullaniciMapper {
                 kullanici.getSifre());
     }
 
-    public static kullanici mapKullanici(kullaniciDTO kullaniciDTO) {
+    public static kullanici mapToKullanici(kullaniciDTO kullaniciDTO) {
         return new kullanici(
                 kullaniciDTO.getId(),
                 kullaniciDTO.getAd(),
