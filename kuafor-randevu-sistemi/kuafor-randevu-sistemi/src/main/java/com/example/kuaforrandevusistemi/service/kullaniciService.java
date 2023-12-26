@@ -4,6 +4,6 @@ import com.example.kuaforrandevusistemi.dto.kullaniciDTO;
 
 public interface kullaniciService {
 
-    kullaniciDTO kullaniciDTO(kullaniciDTO kullaniciDTO);
+    kullaniciDTO kullaniciYarat(kullaniciDTO kullaniciDTO);
 
 }
