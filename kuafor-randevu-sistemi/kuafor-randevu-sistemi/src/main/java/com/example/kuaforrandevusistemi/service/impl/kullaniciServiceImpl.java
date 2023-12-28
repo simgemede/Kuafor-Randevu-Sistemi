@@ -2,13 +2,16 @@ package com.example.kuaforrandevusistemi.service.impl;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
 import org.springframework.stereotype.Service;
+
 import com.example.kuaforrandevusistemi.dto.kullaniciDTO;
 import com.example.kuaforrandevusistemi.entity.kullanici;
 import com.example.kuaforrandevusistemi.exception.kaynakBulunamadiException;
 import com.example.kuaforrandevusistemi.mapper.kullaniciMapper;
 import com.example.kuaforrandevusistemi.repository.kullaniciRepository;
 import com.example.kuaforrandevusistemi.service.kullaniciService;
+
 import lombok.AllArgsConstructor;
 
 @Service
@@ -34,7 +37,7 @@ public class kullaniciServiceImpl implements kullaniciService {
     @Override
     public List<kullaniciDTO> tumKullanicilarGetir() {
         List<kullanici> kullanicilar = kullaniciRepository.findAll();
-        return kullanicilar.stream().map((kullanici) -> kullaniciMapper.mapToKullaniciDTO(kullanici))
+        return kullanicilar.stream().map((kullanici) -> kullaniciMapper.mapToKullanici(kullanici))
                 .collect(Collectors.toList());
     }
 
@@ -61,12 +64,6 @@ public class kullaniciServiceImpl implements kullaniciService {
                         "Bu id ile kayıtlı bir kullanıcı bulunamadı. Id: " + kullaniciId));
 
         kullaniciRepository.deleteById(kullaniciId);
-    }
-
-    @Override
-    public kullaniciDTO kullaniciGuncelle(Long kullaniciId) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'kullaniciGuncelle'");
     }
 
 }
