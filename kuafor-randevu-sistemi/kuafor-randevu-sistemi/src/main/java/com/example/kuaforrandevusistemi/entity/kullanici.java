@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "kullanicilar")
 
 public class kullanici {
 
@@ -23,7 +25,7 @@ public class kullanici {
     private Long id;
     private String ad;
     private String soyad;
-    @Column(name = "eposta_id", nullable = false, unique = false)
+    @Column(name = "eposta_id", nullable = false, unique = true)
     private String email;
     private String telno;
     private String sifre;

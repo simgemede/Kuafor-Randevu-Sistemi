@@ -44,8 +44,7 @@ public class kullaniciServiceImpl implements kullaniciService {
     @Override
     public kullaniciDTO kullaniciGuncelle(Long kullaniciId, kullaniciDTO guncellenenKullanici) {
         kullanici kullanici = kullaniciRepository.findById(kullaniciId)
-                .orElseThrow(() -> new kaynakBulunamadiException(
-                        "Bu id ile kayıtlı bir kullanıcı bulunamadı. Id: " + kullaniciId));
+                .orElseThrow(() -> new kaynakBulunamadiException("Bu id ile kayıtlı bir kullanıcı bulunamadı. Id: " + kullaniciId));
 
         kullanici.setAd(guncellenenKullanici.getAd());
         kullanici.setSoyad(guncellenenKullanici.getSoyad());
@@ -60,8 +59,7 @@ public class kullaniciServiceImpl implements kullaniciService {
     @Override
     public void kullaniciSil(Long kullaniciId) {
         kullanici kullanici = kullaniciRepository.findById(kullaniciId)
-                .orElseThrow(() -> new kaynakBulunamadiException(
-                        "Bu id ile kayıtlı bir kullanıcı bulunamadı. Id: " + kullaniciId));
+                .orElseThrow(() -> new kaynakBulunamadiException("Bu id ile kayıtlı bir kullanıcı bulunamadı. Id: " + kullaniciId));
 
         kullaniciRepository.deleteById(kullaniciId);
     }
