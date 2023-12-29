@@ -18,9 +18,11 @@ import lombok.Setter;
 public class kuafor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String ad;
-    private String soyad;
-    @Column(name = "eposta_id", nullable = false, unique = true)
-    private String eposta;
+    private Long idKuafor;
+    private String adKuafor;
+    private String soyadKuafor;
+    @Column(name = "eposta_id_kuafor", nullable = false, unique = true)
+    private String epostaKuafor;
+    private String telnoKuafor;
+    private String sifreKuafor;
 }
