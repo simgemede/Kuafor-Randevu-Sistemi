@@ -1,6 +1,7 @@
 package com.example.kuaforrandevusistemi.controller;
 
 import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,7 +20,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/api/personeller")
+@RequestMapping("/api/kuaforler")
 public class kuaforController {
     private kuaforService kuaforService;
 
