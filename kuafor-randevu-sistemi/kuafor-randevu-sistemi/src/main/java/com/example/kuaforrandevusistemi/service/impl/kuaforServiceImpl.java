@@ -47,10 +47,9 @@ public class kuaforServiceImpl implements kuaforService {
                 .orElseThrow(() -> new kaynakBulunamadiException(
                         "Bu id ile kayıtlı bir kuaför bulunamadı. Id: " + kuaforId));
 
-        kuafor.setIdKuafor(guncellenenKuafor.getIdKuafor());
         kuafor.setAdKuafor(guncellenenKuafor.getAdKuafor());
         kuafor.setSoyadKuafor(guncellenenKuafor.getSoyadKuafor());
-        kuafor.setEpostaKuafor(guncellenenKuafor.getEpostaKuafor());
+        kuafor.setEmailKuafor(guncellenenKuafor.getEmailKuafor());
         kuafor.setTelnoKuafor(guncellenenKuafor.getTelnoKuafor());
         kuafor.setSifreKuafor(guncellenenKuafor.getSifreKuafor());
 

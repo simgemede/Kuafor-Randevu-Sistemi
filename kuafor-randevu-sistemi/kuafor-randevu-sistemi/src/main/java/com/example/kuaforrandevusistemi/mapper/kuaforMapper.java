@@ -9,7 +9,7 @@ public class kuaforMapper {
                 kuafor.getIdKuafor(),
                 kuafor.getAdKuafor(),
                 kuafor.getSoyadKuafor(),
-                kuafor.getEpostaKuafor(),
+                kuafor.getEmailKuafor(),
                 kuafor.getTelnoKuafor(),
                 kuafor.getSifreKuafor());
     }
@@ -19,7 +19,7 @@ public class kuaforMapper {
                 kuaforDTO.getIdKuafor(),
                 kuaforDTO.getAdKuafor(),
                 kuaforDTO.getSoyadKuafor(),
-                kuaforDTO.getEpostaKuafor(),
+                kuaforDTO.getEmailKuafor(),
                 kuaforDTO.getTelnoKuafor(),
                 kuaforDTO.getSifreKuafor());
     }

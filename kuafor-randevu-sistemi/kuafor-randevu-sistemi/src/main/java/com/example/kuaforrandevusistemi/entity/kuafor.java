@@ -21,8 +21,8 @@ public class kuafor {
     private Long idKuafor;
     private String adKuafor;
     private String soyadKuafor;
-    @Column(name = "eposta_id_kuafor", nullable = false, unique = true)
-    private String epostaKuafor;
+    @Column(name = "email_id_kuafor", nullable = false, unique = true)
+    private String emailKuafor;
     private String telnoKuafor;
     private String sifreKuafor;
 }

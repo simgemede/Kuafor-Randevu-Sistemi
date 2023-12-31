@@ -13,7 +13,7 @@ public class kuaforDTO {
     private Long idKuafor;
     private String adKuafor;
     private String soyadKuafor;
-    private String epostaKuafor;
+    private String emailKuafor;
     private String telnoKuafor;
     private String sifreKuafor;
 }
