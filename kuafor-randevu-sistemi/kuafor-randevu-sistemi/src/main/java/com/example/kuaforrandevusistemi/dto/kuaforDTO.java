@@ -10,6 +10,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class kuaforDTO {
-    private Long id;
-    private String
+    private Long idKuafor;
+    private String adKuafor;
+    private String soyadKuafor;
+    private String emailKuafor;
+    private String telnoKuafor;
+    private String sifreKuafor;
 }

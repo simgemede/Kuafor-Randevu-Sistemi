@@ -44,8 +44,8 @@ public class kullaniciController {
 
     @PutMapping("{id}")
     public ResponseEntity<kullaniciDTO> kullaniciGuncelle(@PathVariable("id") Long kullaniciId,
-            @RequestBody kullaniciDTO guneKullaniciDTO) {
-        kullaniciDTO kullaniciDTO = kullaniciService.kullaniciGuncelle(kullaniciId, guneKullaniciDTO);
+            @RequestBody kullaniciDTO guncelKullaniciDTO) {
+        kullaniciDTO kullaniciDTO = kullaniciService.kullaniciGuncelle(kullaniciId, guncelKullaniciDTO);
         return ResponseEntity.ok(kullaniciDTO);
     }
 
