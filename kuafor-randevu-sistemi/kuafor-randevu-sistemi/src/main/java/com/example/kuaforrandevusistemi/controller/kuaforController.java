@@ -30,7 +30,7 @@ public class kuaforController {
         return new ResponseEntity<>(kayitEdilmisKuafor, HttpStatus.CREATED);
     }
 
-    @GetMapping("{id}")
+    @GetMapping("{idKuafor}")
     public ResponseEntity<kuaforDTO> idIleGetirKuafor(@PathVariable("id") Long kuaforId) {
         kuaforDTO kuaforDTO = kuaforService.idIleGetirKuafor(kuaforId);
         return ResponseEntity.ok(kuaforDTO);
@@ -42,14 +42,14 @@ public class kuaforController {
         return ResponseEntity.ok(kuaforDTOList);
     }
 
-    @PutMapping("{id}")
+    @PutMapping("{idKuafor}")
     public ResponseEntity<kuaforDTO> kuaforGuncelle(@PathVariable("id") Long kuaforId,
             @RequestBody kuaforDTO guncelKuaforDTO) {
         kuaforDTO kuaforDTO = kuaforService.kuaforGuncelle(kuaforId, guncelKuaforDTO);
         return ResponseEntity.ok(kuaforDTO);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("{idKuafor}")
     public ResponseEntity<String> kuaforSil(@PathVariable("id") Long kuaforId) {
         kuaforService.kuaforSil(kuaforId);
         return ResponseEntity.ok("Kuaför başarıyla silindi.");
