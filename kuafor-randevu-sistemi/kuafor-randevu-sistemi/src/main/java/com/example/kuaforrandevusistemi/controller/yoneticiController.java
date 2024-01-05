@@ -31,7 +31,7 @@ public class yoneticiController {
     }
 
     @GetMapping("{idYonetici}")
-    public ResponseEntity<yoneticiDTO> idIleGetirYonetici(@PathVariable("id") Long yoneticiId) {
+    public ResponseEntity<yoneticiDTO> idIleGetirYonetici(@PathVariable("idYonetici") Long yoneticiId) {
         yoneticiDTO yoneticiDTO = yoneticiService.idIleGetirYonetici(yoneticiId);
         return ResponseEntity.ok(yoneticiDTO);
     }
@@ -43,14 +43,14 @@ public class yoneticiController {
     }
 
     @PutMapping("{idYonetici}")
-    public ResponseEntity<yoneticiDTO> yoneticiGuncelle(@PathVariable("id") Long yoneticiId,
+    public ResponseEntity<yoneticiDTO> yoneticiGuncelle(@PathVariable("idYonetici") Long yoneticiId,
             @RequestBody yoneticiDTO guncelYoneticiDTO) {
         yoneticiDTO yoneticiDTO = yoneticiService.yoneticiGuncelle(yoneticiId, guncelYoneticiDTO);
         return ResponseEntity.ok(yoneticiDTO);
     }
 
     @DeleteMapping("{idYonetici}")
-    public ResponseEntity<String> yoneticiSil(@PathVariable("id") Long yoneticiId) {
+    public ResponseEntity<String> yoneticiSil(@PathVariable("idYonetici") Long yoneticiId) {
         yoneticiService.yoneticiSil(yoneticiId);
         return ResponseEntity.ok("Yönetici başarıyla silindi.");
     }

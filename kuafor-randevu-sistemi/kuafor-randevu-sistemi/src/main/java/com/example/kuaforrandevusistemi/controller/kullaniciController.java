@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.kuaforrandevusistemi.dto.kullaniciDTO;
@@ -20,7 +21,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/api/musteriKayit")
+@RequestMapping("/api/kullanicilar")
 public class kullaniciController {
     private kullaniciService kullaniciService;
 
@@ -55,9 +56,9 @@ public class kullaniciController {
         return ResponseEntity.ok("Kullanıcı başarıyla silindi.");
     }
 
-@PostMapping("kaydet")
+    @PostMapping("kaydet")
     public String musteriKayit(@RequestParam String ad, @RequestParam String soyad) {
-        musteriService.kaydet(ad, soyad);
+        kullaniciService.kaydet(ad, soyad);
         return "Kayıt başarıyla eklendi.";
     }
 
