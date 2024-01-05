@@ -89,10 +89,8 @@
   </div>
 
   <div class="input-group mb-3">
-    <span class="input-group-text">Mail Adresiniz:</span>
-    <input type="text" class="form-control" placeholder="" aria-label="Username">
-    <span class="input-group-text">@</span>
-    <input type="text" class="form-control" placeholder="example.com" aria-label="Server">
+    <span class="input-group-text custom-margin" id="addon-wrapping">Mail Adresiniz:</span>
+    <input type="text" class="form-control custom-margin" placeholder="abc@example.com" aria-label="Username" aria-describedby="addon-wrapping">
   </div>
 
   <div class="input-group flex-nowrap">
@@ -106,7 +104,7 @@
   </div>
 
   <div class="col-md-5 mb-2">
-    <button type="button" class="btn btn-primary btn-block custom-btn">Kayıt Ol</button>
+    <button type="button" onclick="kayitOl()" class="btn btn-primary btn-block custom-btn">Kayıt Ol</button>
   </div> 
 
   <h1></h1>
