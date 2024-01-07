@@ -140,27 +140,63 @@
 
     <div class="input-group">
       <span class="input-group-text custom-margin">Adınız / Soyadınız:</span>
-      <input type="text" aria-label="First name" class="form-control input-group" aria-describedby="basic-addon1">
-      <input type="text" aria-label="Last name" class="form-control input-group " aria-describedby="basic-addon1">
-    </div>
-
-    <div class="input-group mb-3">
+      <input type="text" id="firstName" aria-label="First name" class="form-control input-group" aria-describedby="basic-addon1">
+      <input type="text" id="lastName" aria-label="Last name" class="form-control input-group " aria-describedby="basic-addon1">
+  </div>
+  
+  <div class="input-group mb-3">
       <span class="input-group-text custom-margin" id="addon-wrapping">Mail Adresiniz:</span>
-      <input type="text" class="form-control custom-margin" placeholder="abc@example.com" aria-label="Username" aria-describedby="addon-wrapping">  
-    </div>
-
-    <div class="input-group flex-nowrap">
+      <input type="text" id="email" class="form-control custom-margin" placeholder="abc@example.com" aria-label="email" aria-describedby="addon-wrapping">  
+  </div>
+  
+  <div class="input-group flex-nowrap">
       <span class="input-group-text custom-margin-1" id="addon-wrapping">Şifreniz:</span>
-      <input type="text" class="form-control custom-margin-1" placeholder="" aria-label="Username" aria-describedby="addon-wrapping">
-    </div>
-
-    <h1></h1>
-    <button type="button" class="btn btn-primary btn-block custom-btn" onclick="redirectToPage()">Giriş Yap</button>
-    <script>
-        function redirectToPage() {
-      window.location.href = "index3.html";
-    }
-    </script>
+      <input type="text" id="password" class="form-control custom-margin-1" placeholder="" aria-label="password" aria-describedby="addon-wrapping">
+  </div>
+  
+  <h1 id="errorMessage"></h1>
+  <button type="button" class="btn btn-primary btn-block custom-btn" onclick="performLogin()">Giriş Yap</button>
+  
+  <script>
+      function performLogin() {
+          var enteredFirstName = document.getElementById("firstName").value;
+          var enteredLastName = document.getElementById("lastName").value;
+          var enteredEmail = document.getElementById("email").value;
+          var enteredPassword = document.getElementById("password").value;
+  
+          if (enteredFirstName.trim() === "" || enteredLastName.trim() === "" || enteredEmail.trim() === "" || enteredPassword.trim() === "") {
+              // Eksik alan varsa uyarı mesajını göster
+              alert("Lütfen tüm alanları doldurun..");
+              return;
+          }
+  
+          var adminName = "Ali"; // Yönetici ismi
+          var adminLastName = "Kaya"; // Yönetici soyismi
+          var adminEmail = "alikaya@gmail.com"; // Yönetici email
+          var adminPassword = "admin123"; // Yönetici şifre
+  
+          if (
+              enteredFirstName === adminName &&
+              enteredLastName === adminLastName &&
+              enteredEmail === adminEmail &&
+              enteredPassword === adminPassword
+          ) {
+              // Yönetici bilgileri doğru ise giriş yap
+              redirectToPage();
+          } else {
+              // Hatalı giriş, uyarı mesajını göster
+              alert("Hatalı kullanıcı bilgileri. Lütfen kontrol ediniz.");
+          }
+      }
+  
+      function redirectToPage() {
+          alert("Giriş başarılı, yönlendirme yapılacak.");
+          // Yönlendirme yapmak için aşağıdaki satırı kullanabilirsiniz
+          window.location.href = "index3.html";
+      }
+  </script>
+  
+    
    </center>
   </div>
 
