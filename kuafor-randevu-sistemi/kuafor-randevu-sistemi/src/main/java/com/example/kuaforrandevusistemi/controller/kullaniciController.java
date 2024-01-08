@@ -20,7 +20,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/api/musteriKayit")
+@RequestMapping("/api/kullanicilar")
 public class kullaniciController {
     private kullaniciService kullaniciService;
 
@@ -54,11 +54,4 @@ public class kullaniciController {
         kullaniciService.kullaniciSil(kullaniciId);
         return ResponseEntity.ok("Kullanıcı başarıyla silindi.");
     }
-
-@PostMapping("kaydet")
-    public String musteriKayit(@RequestParam String ad, @RequestParam String soyad) {
-        musteriService.kaydet(ad, soyad);
-        return "Kayıt başarıyla eklendi.";
-    }
-
 }

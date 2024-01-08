@@ -18,23 +18,16 @@ import lombok.Setter;
 @Entity
 @Table(name = "musteriKayit")
 
-public class musteriKayit {
+public class kullanici {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-<<<<<<< Updated upstream
     private Long id;
     private String ad;
     private String soyad;
     @Column(name = "email_id", nullable = false, unique = true)
     private String email;
     private String telno;
-=======
-    private String adSoyad;
-    @Column(name = "eposta_id", nullable = false, unique = true)
-    private String mail;
-    private String telNo;
->>>>>>> Stashed changes
     private String sifre;
 
 }
