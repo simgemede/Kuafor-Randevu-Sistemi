@@ -1,6 +1,8 @@
 package com.example.kuaforrandevusistemi.entity;
 
-import jakarta.persistence.Column;
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,18 +18,15 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "kullanicilar")
-
-public class kullanici {
-
+@Table(name = "randevular")
+public class randevu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String ad;
-    private String soyad;
-    @Column(name = "email_id", nullable = false, unique = true)
-    private String email;
-    private String telno;
-    private String sifre;
-
+    private Long idRandevu;
+    private String kuafor;
+    private String islem;
+    private String diger;
+    private String not;
+    private LocalDate tarih;
+    private LocalTime saat;
 }
